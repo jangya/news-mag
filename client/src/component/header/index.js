@@ -18,8 +18,6 @@ const useStyles = makeStyles((theme) => ({
   },
   toolbarTitle: {
     flex: 1,
-    fontFamily: 'monospace',
-    fontWeight: 700
   }
 }));
 const LinkRouter = (props) => <Link {...props} component={RouterLink} />;
@@ -38,7 +36,7 @@ const Header = (props) => {
         <Avatar alt="Country" src="/gb.svg">C</Avatar>
       </LinkRouter>
       <Typography
-        variant="h5"
+        variant="h4"
         color="inherit"
         align="center"
         noWrap
