@@ -23,6 +23,6 @@
     "eslint-plugin-react": "^7.23.1"
   },
   "engines": {
-    "node": "14.x"
+    "node": "12.x"
   }
 }
