@@ -13,7 +13,7 @@ app.locals.cfg = cfg;
 // Mount client
 app.use(express.static(cfg.clientDir));
 // Handle React routing, return all requests to React app
-app.get('*', function(req, res) {
+app.get('/*', function(req, res) {
   res.sendFile(path.join(cfg.clientDir, 'index.html'));
 });
 app.use(require('./routes.js'));
