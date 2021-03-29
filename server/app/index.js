@@ -9,8 +9,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.locals.cfg = cfg;
 
-// middleware
+// Mount client
 app.use(express.static(cfg.clientDir));
+// Handle React routing, return all requests to React app
+app.get('*', function(req, res) {
+  res.sendFile(cfg.clientDir, 'index.html'));
+});
 app.use(require('./routes.js'));
 
 // custom error middleware
