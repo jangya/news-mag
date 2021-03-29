@@ -2,11 +2,11 @@
   "name": "news-mag",
   "version": "1.0.0",
   "scripts": {
-    "preinstall": "cd client && npm i",
+    "preinstall": "cd client && npm i && npm run build",
     "client": "cd client && npm start",
     "server": "nodemon --ignore 'client/**/*.js' index.js",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
-    "start": "cd client && npm run build && cd .. && node index.js",
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
