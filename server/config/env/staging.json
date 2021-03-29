@@ -1,5 +1,4 @@
 {
-  "port": 5000,
   "greeting": "Hello world",
   "graylog": {
     "host": "localhost",

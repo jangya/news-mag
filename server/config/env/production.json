@@ -1,5 +1,4 @@
 {
-  "port": 8000,
   "greeting": "Hello production world",
   "graylog": {
     "host": "localhost",
