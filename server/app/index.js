@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cfg = require('../config');
+const path = require('path');
 
 const app = express();
 
@@ -13,7 +14,7 @@ app.locals.cfg = cfg;
 app.use(express.static(cfg.clientDir));
 // Handle React routing, return all requests to React app
 app.get('*', function(req, res) {
-  res.sendFile(cfg.clientDir, 'index.html'));
+  res.sendFile(path.join(cfg.clientDir, 'index.html'));
 });
 app.use(require('./routes.js'));
 
