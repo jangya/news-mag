@@ -10,13 +10,15 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.locals.cfg = cfg;
 
+app.use(require('./routes.js'));
+
 // Mount client
 app.use(express.static(cfg.clientDir));
 // Handle React routing, return all requests to React app
-app.get('/', function(req, res) {
-  res.sendFile(path.join(cfg.clientDir, 'index.html'));
+// This must be after other routes
+app.get('*', function(req, res) {
+  res.sendFile(path.resolve(cfg.clientDir, 'index.html'));
 });
-app.use(require('./routes.js'));
 
 // custom error middleware
 app.use(require('../middleware/notFound'));
