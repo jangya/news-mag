@@ -2,7 +2,7 @@
 
 News-Mag is a fullstack web application built on node, react and newsapi.org(API source). Currently it get the top headlines from UK. Much more to come stay tuned.. 
 
-**Live** - https://news-mag.herokuapp.com
+**Live** - https://news-org.herokuapp.com
 
 ![image](https://user-images.githubusercontent.com/7237378/112875573-fce77280-90e1-11eb-8dc1-361a4a16e6e5.png)
 
