@@ -36,6 +36,7 @@ export default function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/search" component={Search} />
           <Route exact path="/search/post/:id" component={Post} />
+          <Route exact path="/:country" component={Home} />
           <Route exact path="/:country/:category" component={Home} />
           <Route exact path="/:country/:category/post/:id" component={Post} />
           {/* <Route component={NotFound} /> */}

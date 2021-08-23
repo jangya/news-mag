@@ -9,7 +9,6 @@ import MainFeaturedPost from './mainFeaturedPost';
 import FeaturedPost from './featuredPost';
 import Nav from './nav';
 
-const categories = ['general', 'business', 'entertainment', 'science', 'health', 'sports', 'technology'];
 const useStyles = makeStyles(theme => ({
   grid: {
     marginTop: theme.spacing(4)
@@ -41,7 +40,7 @@ const Home = (props) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const options = {
     category: props.match.params.category || 'general',
-    country: props.match.params.country || 'gb',
+    country: props.match.params.country || 'in',
   };
 
   useEffect(async () => {
@@ -85,7 +84,7 @@ const Home = (props) => {
 
   return (
     <React.Fragment>
-      <Nav categories={categories}></Nav>
+      <Nav/>
       <TopPosts />
       <Snackbar
         anchorOrigin={{
